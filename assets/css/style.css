@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--maincolor);
+  }
+  :root {
+   --maincolor:#efeee9;
+   --fontcolor:#080404;
+   
+  }
+  .main-button{
+  text-decoration: none;
+  left:140px;
+  display: inline-block;
+  padding: 0.35rem 1.25rem;
+  color: #000;
+  font-size: 16px;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.main-button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  z-index: -2;
+}
+.main-button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #000;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.main-button:hover {
+  color: #000;
+}
+.main-button:hover:before {
+  width: 100%;
+}
+section{
+    padding: 4vw 0;
+}
+ 
+  h1.collection {
+    font-size: 48px;
+    text-align: center;
+    color: var(--fontcolor);
+  }
+  .inner-image{
+    position: absolute;
+    top:55%;
+    left:65%;
+  }
+  .inner-image p{
+    font-size: 33px;
+  }
+  .button {
+    text-decoration: none;
+    left:140px;
+    display: inline-block;
+    padding: 0.35rem 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    z-index: -2;
+  }
+  .button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+    transition: all 0.3s;
+    z-index: -1;
+  }
+  .button:hover {
+    color: #000;
+  }
+  .button:hover:before {
+    width: 100%;
+  }
+  /* about  */
+  .about-image{
+    position: relative;
+  }
+  .about-text{
+    position: absolute;
+    top: 5%;
+    right:-20%;
+    background-color: #efeee9;
+    padding: 1.3vw  2.7vw;
+    align-items: center;
+    text-align: center;
+   line-height: 30px;
+  }
+  .about-text p{
+    align-items: center;
+    color: #080404;
+    text-align: center;
+    margin-bottom: 0 !important;
+    font-size: 30px;
+  }
+  .about-right{
+   padding: 2vw 4vw;
+   font-size: 48px;
+     margin: 0;
+  }
+  /* products  */
+  .our-best-selling {
+    font-size: 48px;
+    line-height: 48px;
+    color: #080404;
+    text-align: center;
+    }
