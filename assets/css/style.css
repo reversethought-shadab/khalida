@@ -1,23 +1,36 @@
+@import url(https://db.onlinewebfonts.com/c/f5665d28a370000c4c1738aa85baba08?family=OPTIBakerDanmarkOne);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	font-family: "OPTIBakerDanmarkOne";
   }
   body {
     height: 100vh;
     width: 100%;
     background-color: var(--maincolor);
+	font-family: "OPTIBakerDanmarkOne";
   }
   :root {
    --maincolor:#efeee9;
    --fontcolor:#080404;
    
   }
+  @font-face {
+    font-family: "OPTIBakerDanmarkOne";
+    src: url("https://db.onlinewebfonts.com/t/f5665d28a370000c4c1738aa85baba08.eot");
+    src: url("https://db.onlinewebfonts.com/t/f5665d28a370000c4c1738aa85baba08.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f5665d28a370000c4c1738aa85baba08.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f5665d28a370000c4c1738aa85baba08.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f5665d28a370000c4c1738aa85baba08.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f5665d28a370000c4c1738aa85baba08.svg#OPTIBakerDanmarkOne")format("svg");
+}
   .main-button{
   text-decoration: none;
-  left:140px;
+  /* left:140px; */
+  font-family:"OPTIBakerDanmarkOne"; 
   display: inline-block;
-  padding: 0.35rem 1.25rem;
+  padding: 18px 50px;
   color: #000;
   font-size: 16px;
   letter-spacing: 0.15rem;
@@ -58,7 +71,33 @@
 section{
     padding: 4vw 0;
 }
- 
+ /* hero / */
+ .hero{
+	background-image: url(../images/hero.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 120vh;
+	width: 100%;
+ }
+ .navlink{
+	display: flex;
+	justify-content: center;
+	gap: 80px;
+	align-items: end;
+ }
+.logo{
+	height: 60px;
+	margin-bottom: 8px;
+	cursor: pointer;
+
+}
+.navitems a{
+	 
+	font-size: 16px;
+	align-items: end;
+	color: #fff;
+ }
   h1.collection {
     font-size: 48px;
     text-align: center;
@@ -71,6 +110,8 @@ section{
   }
   .inner-image p{
     font-size: 33px;
+	color: #efeee9;
+	width: 70%;
   }
   .button {
     text-decoration: none;
@@ -141,10 +182,239 @@ section{
    font-size: 48px;
      margin: 0;
   }
+  .inner-text{
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px 39px;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+  }
+  .inner-text p {
+	font-size: 34px;
+	line-height: 30px;
+	color: #fff;
+  }
+  
+  .inner-text p:last-child {
+	font-size: 20px;
+	
+  }
   /* products  */
+  .image-slider{
+	display: flex;
+  }
+  .image-big{
+	position: relative;
+  }
+  .inner-text{
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  .slick-slider button{
+	position: absolute;
+	top: 103%;
+	outline: none;
+	height: 60px;
+	width: 60px;
+	border: #ffffff;
+	z-index: 99;
+  }
+  .slick-slider .slick-prev{
+	left: 89% ;
+    top: 103% ;
+	
+  }
+
+  .slick-slider .slick-prev::before{
+	/* font-family: "Font Awesome 5 Free"; */
+	content: "\2190";
+	line-height: 1;
+	display: inline-block;
+	font-size: 24px;
+  }
+  .slick-slider .slick-next::before{
+	/* font-family: "Font Awesome 5 Free"; */
+	content: "\2192";
+	display: inline-block;
+	line-height: 1;
+	font-size: 24px;
+  }
+  .slick-slider .slick-next{
+	right: 34px ;
+    top: 103% ;
+  }
+  /* .slick-dots li{
+	display: inline-block;
+	padding: 1px;
+	background-color: #ccc;
+	margin: 10px 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+  } */
+  .slick-dots button{
+	display: none;
+  }
+  .slick-dots li.active{
+	background-color: #080404;
+  }
+  .slick-slider img{
+	width: 100%;
+	height: 850px;
+  }
+  .slick-slider{
+	padding: 40px 0;
+	position: relative;
+	height: auto !important;
+	/* opacity: 0.5; */
+	transition: all 900ms ease;
+  }
+  .slick-current{
+	opacity: 1;
+	transform: scale(1.2);
+	z-index: 99;
+box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+  }
+  .slick-slide .image-big{
+	opacity: 0 !important;
+  }
+  .slick-current .image-big{
+	opacity: 1 !important;
+  }
+  .image-big:hover .inner-text{
+	display: block;
+	transition: all cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .seen{
+    column-gap: 88px;
+    padding: 45px 0;
+  }
   .our-best-selling {
     font-size: 48px;
     line-height: 48px;
     color: #080404;
     text-align: center;
     }
+     .playButton {
+      width: 6.588579795vw;
+      height: 6.588579795vw;
+      display: flex;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      cursor: pointer;
+  }
+ /* contact */
+ .contact-home{
+  border-bottom: 1px solid black;
+  position: relative;
+ }
+ 
+  
+  .contact-home::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1px;
+	height: 82%;
+	background: black;
+  }
+  
+  .contact-home::after {
+	content: '';
+	position: absolute;
+	top: 17.8%;
+	left: 49.77%;
+	transform: translateX(-50%);
+	width: 8px;
+	height: 8px;
+	background-color: black;
+	transform: rotate(135deg);
+}
+  
+.contact-title{
+	font-size: 32px;
+    line-height: 40px;
+}
+.contact-left{
+	padding: 53px 30px;
+}
+.email p, a{
+font-size: 20px;
+}
+.get{
+	font-size: 48px;
+	line-height: 60px;
+}
+.showroom{
+	font-size: 48px;
+	margin-top: 32px;
+}
+.adress{font-size: 32px;
+line-height: 40px;}
+.contact-right{
+	padding: 53px 30px;
+}
+/* footer  */
+.footer {
+	padding-top: 46px;
+	
+  }
+  .footer > .container {
+	padding-bottom: 1rem;
+  }
+  .info{
+	font-size: 32px;
+
+  }
+  
+  .footer .footer-logo {
+	height: 104px;
+	/* margin-bottom: 1.3rem; */
+	margin-top: 4rem;
+  }
+  
+  .footer-head {
+	font-weight: 500;
+	color: black;
+  }
+  .list-details{
+	padding-left: 0 !important;
+  }
+  .list-details li{
+	font-size: 14px;
+line-height: 34px;
+font-weight: 300;
+list-style: none;
+  }
+  .list-details li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+  }
+  .list-details li:not(:last-child) {
+	margin-bottom: 0.3rem;
+  }
+  .f-adress{
+	font-size: 16px;
+  }
+  .l-adress{
+	font-size: 16px;
+	line-height: 17px;
+  }
+  .svg-inline--fa {
+    display: var(--fa-display,inline-block);
+    height: 2em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+  
