@@ -20,6 +20,55 @@ links.forEach((link) => {
     });
   });
 });
+
+// header include
+class MyHeader extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="py-3">
+       
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <div class="nav-item">
+            <li><a href="#" class="active">Collection</a></li>
+            <div class="active-nav"></div>
+          </div>
+          <div class="nav-item">
+            <li><a href="#">About us</a></li>
+          </div>
+          <div class="nav-item">
+            <li><a href="#">Press</a></li>
+          </div>
+          <div class="logo"><img src="assets/images/logofooter.png" alt=""></div>
+            <div class="nav-item">
+            <li><a href="#">Contact</a></li>
+          </div>
+            <div class="nav-item">
+            <li><a href="#">Instagram</a></li>
+          </div>
+        </ul>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <button class="toggle-btn" id="nav-toggle-btn">
+          <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
+            <path d="M10,2 L2,2" class="bar-1"></path>
+            <path d="M2,5 L10,5" class="bar-2"></path>
+            <path d="M10,8 L2,8" class="bar-3"></path>
+          </svg>
+        </button>
+      </nav>
+     
+     
+    </div>
+      `;
+  }
+}
+
+customElements.define("my-header", MyHeader);
+
 // footer export
 //Footer Component
 class MyFooter extends HTMLElement {
