@@ -74,30 +74,75 @@ section{
  /* hero / */
  .hero{
 	background-image: url(../images/hero.png);
-	background-position: center;
+	background-position-x: 2%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 120vh;
+	height: 150vh;
 	width: 100%;
+  position: relative;
  }
- .navlink{
-	display: flex;
-	justify-content: center;
-	gap: 80px;
-	align-items: end;
+ .center-text{
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%,-50%);
+  font-size: 44px;
+  color: #efeee9;
  }
-.logo{
-	height: 60px;
+.logo img{
+	height: 90px;
 	margin-bottom: 8px;
 	cursor: pointer;
 
 }
-.navitems a{
-	 
-	font-size: 16px;
-	align-items: end;
-	color: #fff;
- }
+.toggle-btn{
+  background: #000;
+  cursor: pointer;
+  padding: 6px;
+  width: 70px;
+  height: 70px;
+  border-radius: 200px;
+}
+.hamburger path{
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+}
+.nav-bar{
+  /* margin-right: -30px; */
+  min-width: 100vw;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  /* padding: 3rem; */
+}
+.nav-bar .nav-links{
+  display: flex;
+  align-items: end;
+  list-style: none;
+  gap: 5rem;
+}
+.nav-links a{
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  /* font-weight: 600; */
+}
+.nav-links .active{
+  color: #1f1e1e;
+}
+.nav-item{
+  position: relative;
+}
+.active-nav{
+  height: 3px;
+  width: 100%;
+  background-color: #1f1e1e;
+  border-radius: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
   h1.collection {
     font-size: 48px;
     text-align: center;
