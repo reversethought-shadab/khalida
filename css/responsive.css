@@ -40,6 +40,9 @@
 }
 
 @media (max-width: 767px) {
+    .reverse {
+        flex-direction: column-reverse;
+    }
 
     .collection-sec,
     section {
@@ -115,7 +118,7 @@
     .get-in-touch-wrapper,
     .contact-wrapper {
         margin: 0 !important;
-        padding: 30px 0;
+        padding-block: 30px;
         position: relative;
     }
 
