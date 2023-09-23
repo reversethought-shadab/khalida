@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick-theme.min.css">
     <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="css/responsive.css?v=1.2">
 </head>
@@ -22,32 +24,40 @@
                 <div class="col-12 mb-4">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Collection</a></li>
-                            <li class="breadcrumb-item"><a href="#">Artwall</a></li>
+                            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="./collection.html">Collection</a></li>
+                            <li class="breadcrumb-item"><a href="./collection-inner.html">Artwall</a></li>
                             <li class="breadcrumb-item active" aria-current="page">OG-Green</li>
                         </ol>
                     </nav>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-gap-4">
                 <div class="col-lg-6">
-                    <div class="product-img">
+                    <div class="product-img position-relative">
                         <img src="./img/product/product1.jpg" alt="" class="img-fluid" />
+                        <div class="slick-arrows">
+                            <button class="prev-arrow">
+                                <img src="img/slick-arrow.png" alt="Left Arrow" />
+                            </button>
+                            <button class="next-arrow">
+                                <img src="img/slick-arrow.png" alt="Right Arrow" />
+                            </button>
+                        </div>
                     </div>
                     <div class="thumbnail-img">
-                        <a href="#" class="active">
+                        <a role="button" class="active">
                             <img src="./img/product/product1.jpg" alt="" class="img-fluid" />
                         </a>
-                        <a href="#">
-                            <img src="./img/product/product1.jpg" alt="" class="img-fluid" />
+                        <a role="button">
+                            <img src="./img/product/product2.jpg" alt="" class="img-fluid" />
                         </a>
-                        <a href="#">
+                        <a role="button">
                             <img src="./img/product/product1.jpg" alt="" class="img-fluid" />
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 prod-desc">
+                <div class="col-lg-6 ps-lg-5 prod-desc">
                     <div class="mb-lg-5 mb-3">
                         <h3>OG-Green</h3>
                         <p>A textured structure in a deep kaki color</p>
@@ -145,7 +155,7 @@
                 <div class="col-md-6 text-center">
                     <div class="get-in-touch-wrapper first">
                         <h2>Get in touch</h2>
-                        <a href="contact.html" class="btn btn-outline-secondary">Send us an email</a>
+                        <a href="#" class="btn btn-outline-secondary">Send us an email</a>
                     </div>
                     <div class="get-in-touch-wrapper">
                         <h2>Showroom</h2>
@@ -160,11 +170,26 @@
     <footer id="footer"></footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/youtube-popup.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        let prodImg = document.querySelector('.product-img img')
+        const thumbImg = document.querySelectorAll(".thumbnail-img a img");
+        thumbImg.forEach((e) => {
+            $(e).click(() => {
+                prodImg.srcset = e.src;
+            });
+        });
+        $('.thumbnail-img a').click(function () {
+            $('.thumbnail-img a').removeClass('active');
+            $(this).addClass('active')
+        })
+    </script>
 </body>
 
 </html>

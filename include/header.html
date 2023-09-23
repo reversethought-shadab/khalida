@@ -3,13 +3,11 @@
         <a class="navbar-brand d-lg-none" href="./index.html">
             <img src="./img/logo.png" alt="Logo" />
         </a>
-        <button class="navbar-toggler border-0" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-            aria-controls="offcanvasExample">
+        <button class="navbar-toggler border-0" type="button" id="open-nav">
             <span></span>
             <span></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-end" id="mob-nav">
             <div class="offcanvas-header">
                 <a class="navbar-brand d-lg-none" href="./index.html">
                     <img src="./img/logo.png" alt="Logo" />
@@ -18,14 +16,14 @@
             </div>
             <div class="offcanvas-body align-items-end">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item  ">
-                        <a class="nav-link active " href="./collection.html">Collections</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./collection.html">Collections</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./about-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Press</a>
+                        <a class="nav-link" href="./press.html">Press</a>
                     </li>
                 </ul>
                 <a class="navbar-brand d-none d-lg-block" href="./index.html">
@@ -39,7 +37,7 @@
                         <a class="nav-link" href="#">Instagram</a>
                     </li>
                 </ul>
-                    <!-- <li class="slide"></li> -->
+
                 <div class="d-lg-none bottom-0 mb-3 position-absolute text-center">
                     <div class="d-flex flex-column">
                         <div class="d-flex justify-content-center gap-3 mb-3">
@@ -69,3 +67,11 @@
         </div>
     </div>
 </nav>
+<script>
+    document.getElementById('open-nav').onclick = () => {
+        document.getElementById('mob-nav').classList.add('open')
+    }
+    document.querySelector('.btn-close').onclick = () => {
+        document.getElementById('mob-nav').classList.remove('open')
+    }
+</script>

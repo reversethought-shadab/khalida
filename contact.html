@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick-theme.min.css">
     <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="css/responsive.css?v=1.2">
 </head>
@@ -20,25 +22,27 @@
         <div class="container">
             <div class="row row-gap-4 align-items-center">
                 <div class="col-lg-6  text-lg-start text-center">
-                    <img src="./img/contact/contact-img.jpg" alt="Contact us" class="img-fluid" />
+                    <img src="./img/contact/contact-img.jpg" alt="Contact us" class="img-fluid wow fadeInLeft" />
                 </div>
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="mb-3 mb-lg-4 about-title">We love hearing from you.</h2>
-                    <p class="mb-3 mb-lg-4">Let us know any queries, comments or anything via the form below.</p>
+                    <h2 class="mb-3 mb-lg-4 about-title wow fadeInRight" data-wow-delay="100ms">We love hearing from
+                        you.</h2>
+                    <p class="mb-3 mb-lg-4 wow fadeInRight" data-wow-delay="200ms">Let us know any queries, comments or
+                        anything via the form below.</p>
                     <form action="#" method="post" id="contactForm">
-                        <div class="mb-lg-5 mb-3">
+                        <div class="mb-lg-5 mb-3 wow fadeInRight" data-wow-delay="300ms">
                             <label for="Name" class="form-label">Name*</label>
                             <input type="text" name="name" class="form-control" id="Name" />
                         </div>
-                        <div class="mb-lg-5 mb-3">
+                        <div class="mb-lg-5 mb-3 wow fadeInRight" data-wow-delay="600ms">
                             <label for="email" class="form-label">Email*</label>
                             <input type="email" name="email" class="form-control" id="email" />
                         </div>
-                        <div class="mb-lg-5 mb-3">
+                        <div class="mb-lg-5 mb-3 wow fadeInRight" data-wow-delay="900ms">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center wow fadeInRight" data-wow-delay="1200ms">
                             <button type="submit" class="btn btn-outline-secondary">Submit</button>
                         </div>
                     </form>
@@ -52,7 +56,7 @@
         <div class="container">
             <div class="row row-gap-4 reverse pt-lg-5 mob-line">
                 <div class="col-md-6">
-                    <div class="contact-wrapper first">
+                    <div class="contact-wrapper first wow fadeInLeft" data-wow-delay="100ms">
                         <h3>Khalida Toukkani<br />Founder and Creative Director</h3>
                         <div class="d-flex flex-wrap gap-3">
                             <p>E-mail<br />
@@ -63,7 +67,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="contact-wrapper">
+                    <div class="contact-wrapper wow fadeInLeft" data-wow-delay="300ms">
                         <h3>Khadija Keddou<br />Marketing Director</h3>
                         <div class="d-flex flex-wrap gap-3">
                             <p>E-mail<br />
@@ -74,7 +78,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row text-center text-md-start">
+                    <div class="row text-center text-md-start wow fadeInLeft" data-wow-delay="600ms">
                         <div class="contact-wrapper col-md-6">
                             <h3>Showroom</h3>
                             <p>Hinterbergstrasse 32 6330,<br />
@@ -87,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center wow fadeInRight">
                     <img src="./img/contact/map.jpg" alt="Map" class="img-fluid" />
                 </div>
             </div>
@@ -98,21 +102,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center mb-lg-5 mb-3">Follow us on Instagram</h2>
+                    <h2 class="text-center mb-lg-5 mb-3 wow fadeInUp">Follow us on Instagram</h2>
                 </div>
             </div>
             <div class="row row-gap-4 justify-content-center">
                 <div class="col-lg-4 col-6">
-                    <img src="img/insta-1.jpg" alt="" class="img-fluid w-100" />
+                    <img src="img/insta-1.jpg" alt="" class="img-fluid w-100 wow fadeInLeft" />
                 </div>
                 <div class="col-lg-4 col-6">
-                    <img src="img/insta-2.jpg" alt="" class="img-fluid w-100" />
+                    <img src="img/insta-2.jpg" alt="" class="img-fluid w-100 wow fadeInUp" />
                 </div>
                 <div class="col-lg-4 col-6">
-                    <img src="img/insta-3.jpg" alt="" class="img-fluid w-100" />
+                    <img src="img/insta-3.jpg" alt="" class="img-fluid w-100 wow fadeInRight" />
                 </div>
                 <div class="col-12 text-center">
-                    <a href="#" class="btn btn-outline-secondary">See more on Instagram</a>
+                    <a href="#" class="btn btn-outline-secondary wow fadeInUpBig">See more on Instagram</a>
                 </div>
             </div>
         </div>
@@ -122,6 +126,8 @@
     <footer id="footer"></footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
