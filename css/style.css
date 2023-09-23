@@ -619,7 +619,9 @@ button:is(:focus, :active) {
     object-fit: cover;
     object-position: center;
 }
-
+.slick-list .slick-slide{
+    width: 136.5px !important;
+}
 
 .product-img {
     max-height: 600px;
