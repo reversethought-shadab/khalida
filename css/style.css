@@ -18,6 +18,10 @@ body {
     background-color: #EFEEE9;
 }
 
+section {
+    overflow: hidden;
+}
+
 .font-opt {
     font-family: 'Opti-baker';
 }
@@ -215,7 +219,7 @@ button:is(:focus, :active) {
 }
 
 .hero-section {
-    background-image: url(../img/hero-banner.jpg);
+    background-image: url(../img/hero-image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -247,7 +251,7 @@ button:is(:focus, :active) {
 }
 
 .collection-bg {
-    background-image: url(../img/collection-banner.jpg);
+    background-image: url(../img/collection-image.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -505,7 +509,7 @@ button:is(:focus, :active) {
 }
 
 .bg3 {
-    background-image: url(../img/about/about2-bg.jpg);
+    background-image: url(../img/about/about-second.png);
     background-size: cover;
     background-position: center;
 }
@@ -619,9 +623,7 @@ button:is(:focus, :active) {
     object-fit: cover;
     object-position: center;
 }
-.slick-list .slick-slide{
-    width: 136.5px !important;
-}
+
 
 .product-img {
     max-height: 600px;
