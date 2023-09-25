@@ -130,3 +130,23 @@ $("#yt-vid").grtyoutube({
   duration: 1200,
 }); */
 new WOW().init();
+// contact send mail
+function sendMail() {
+  var params = {
+    name: document.getElementById("Name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+}
+const serviceID = "service_ca7ezen";
+const templateID = "template_zut1le6";
+emailjs
+  .send(serviceID, templateID, params)
+  .then((res) => {
+    name: document.getElementById("Name").value = "";
+    email: document.getElementById("email").value = "";
+    message: document.getElementById("message").value = "";
+    console.log(res);
+    alert("your massage succuss");
+  })
+  .catch((err) => console.log(err));

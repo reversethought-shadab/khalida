@@ -509,7 +509,7 @@ button:is(:focus, :active) {
 }
 
 .bg3 {
-    background-image: url(../img/about/about-second.png);
+    background-image: url(../img/about/brand-kit.png);
     background-size: cover;
     background-position: center;
 }

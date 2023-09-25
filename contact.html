@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="css/responsive.css?v=1.2">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("CJksGKjDbZXjArpoz");
+   })();
+</script>
 </head>
 
 <body>
@@ -29,7 +37,7 @@
                         you.</h2>
                     <p class="mb-3 mb-lg-4 wow fadeInRight" data-wow-delay="200ms">Let us know any queries, comments or
                         anything via the form below.</p>
-                    <form action="#" method="post" id="contactForm">
+                    <form action="#" method="post" id="contactForm" >
                         <div class="mb-lg-5 mb-3 wow fadeInRight" data-wow-delay="300ms">
                             <label for="Name" class="form-label">Name*</label>
                             <input type="text" name="name" class="form-control" id="Name" />
@@ -43,7 +51,7 @@
                             <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                         </div>
                         <div class="text-center wow fadeInRight" data-wow-delay="1200ms">
-                            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                            <button type="submit" class="btn btn-outline-secondary" onclick="sendMail()">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -126,6 +134,7 @@
     <footer id="footer"></footer>
 
     <script src="js/jquery.min.js"></script>
+    
     <script src="js/aos.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
@@ -151,6 +160,7 @@
             });
         });
     </script>
+    
 </body>
 
 </html>
