@@ -131,22 +131,70 @@ $("#yt-vid").grtyoutube({
 }); */
 new WOW().init();
 // contact send mail
+// function sendMail() {
+//   var serviceID = "service_ca7ezen";
+//   var templateID = "template_zut1le6";
+
+//   var emailParams = {
+//     name: document.getElementById("Name").value,
+//     email: document.getElementById("email").value,
+//     message: document.getElementById("message").value,
+//   };
+
+//   emailjs
+//     .send(serviceID, templateID, emailParams)
+//     .then((res) => {
+//       document.getElementById("Name").value = "";
+//       document.getElementById("email").value = "";
+//       document.getElementById("message").value = "";
+//       console.log(res);
+//       alert("Your message was sent successfully!");
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       alert(
+//         "An error occurred while sending your message. Please try again later."
+//       );
+//     });
+// }
+// Initialize EmailJS with your User ID
+emailjs.init("your_user_id");
+
+// Function to send the email
 function sendMail() {
-  var params = {
-    name: document.getElementById("Name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
+  const form = document.getElementById("contactForm");
+  const submitButton = document.getElementById("submit-button");
+
+  submitButton.addEventListener("click", function () {
+    // Collect form data
+    const name = form.Name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    // Use the Service ID and Template ID you created in EmailJS
+    const serviceID = "service_ca7ezen";
+    const templateID = "template_zut1le6";
+
+    // Prepare the email parameters
+    const emailParams = {
+      name,
+      email,
+      message,
+    };
+
+    // Send the email
+    emailjs.send(serviceID, templateID, emailParams).then(
+      function (response) {
+        console.log("Email sent:", response);
+        alert("Your message was sent successfully!");
+        form.reset();
+      },
+      function (error) {
+        console.error("Email send error:", error);
+        alert(
+          "An error occurred while sending your message. Please try again later."
+        );
+      }
+    );
+  });
 }
-const serviceID = "service_ca7ezen";
-const templateID = "template_zut1le6";
-emailjs
-  .send(serviceID, templateID, params)
-  .then((res) => {
-    name: document.getElementById("Name").value = "";
-    email: document.getElementById("email").value = "";
-    message: document.getElementById("message").value = "";
-    console.log(res);
-    alert("your massage succuss");
-  })
-  .catch((err) => console.log(err));
