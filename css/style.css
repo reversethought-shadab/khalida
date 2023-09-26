@@ -71,13 +71,15 @@ h6 {
 }
 
 h2 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: 0em;
     color: #080404;
 }
-
+a{
+    color: #080404;
+}
 .black {
     color: #080404;
 }
@@ -218,16 +220,10 @@ button:is(:focus, :active) {
     margin: 0 30px;
     white-space: nowrap;
 }
+#header .nav-link:is(.active, :hover) {
+    color: #080404;
+}
 
-#header .nav-link.active{
-    /* border-bottom: 2px solid #080404; */
-    /* display: inline-block; */
-    color: #080404;
-    /* padding-bottom: 4px; */
-}
-#header .nav-link:hover{
-    color: #080404;
-}
 .navbar-toggler {
     border-radius: 50%;
     width: 43px;
