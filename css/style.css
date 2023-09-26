@@ -17,7 +17,15 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: #EFEEE9;
 }
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(10, 9, 10, 0.404);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
 
+}
 section {
     overflow: hidden;
 }
