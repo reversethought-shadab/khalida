@@ -2,13 +2,11 @@ $(function () {
   $("#header").load("include/header.html");
   $("#footer").load("include/footer.html");
 });
-
-$(window).scroll(function () {
-  $(window).scrollTop() > 200
-    ? $("#header").addClass("fix")
-    : $("#header").removeClass("fix");
-});
-
+// $(window).scroll(function () {
+//   $(window).scrollTop() > 200
+//     ? $("#header").addClass("fix")
+//     : $("#header").removeClass("fix");
+// });
 $(".slide-card a").click(function () {
   $(this).siblings("p").children().toggleClass("d-none");
   $(this).text($(this).text() == "Show less" ? "Show more" : "Show less");
@@ -198,3 +196,11 @@ function sendMail() {
     );
   });
 }
+const navLink = document.querySelectorAll(".nav-link");
+
+function linkAct() {
+  navLink.forEach((n) => n.classList.remove("active"));
+  this.classList.add("active");
+}
+
+navLink.forEach((n) => n.addEventListener("click", linkAct));
