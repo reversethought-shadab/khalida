@@ -223,7 +223,9 @@ button:is(:focus, :active) {
 #header .nav-link:is(.active, :hover) {
     color: #080404;
 }
-
+.navbar-nav{
+    align-items: end;
+}
 .navbar-toggler {
     border-radius: 50%;
     width: 43px;
