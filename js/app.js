@@ -205,23 +205,3 @@ function sendMail() {
 // }
 
 // navLink.forEach((n) => n.addEventListener("click", linkAct));
-gsap.registerPlugin(Flip);
-const links = document.querySelectorAll(".nav-links a");
-const activeNav = document.querySelector(".active-nav");
-
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    gsap.to(links, { color: "#333" });
-    if (document.activeElement === link) {
-      gsap.to(link, { color: "#036cff" });
-    }
-
-    const state = Flip.getState(activeNav);
-    link.appendChild(activeNav);
-    Flip.from(state, {
-      duration: 1.25,
-      absolute: true,
-      ease: "elastic.out(1, 0.5)",
-    });
-  });
-});

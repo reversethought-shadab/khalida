@@ -223,19 +223,7 @@ button:is(:focus, :active) {
 #header .nav-link:is(.active, :hover) {
     color: #080404;
 }
-.line {
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    margin: 10px 0 0 0;
-    background: #FF1847;
-  }
-  .nav-link .active {
-    opacity: 1;
-  }
-  .nav-link:last-child {
-    margin-right: 0;
-  }
+
 .navbar-toggler {
     border-radius: 50%;
     width: 43px;
