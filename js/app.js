@@ -197,11 +197,30 @@ function sendMail() {
     );
   });
 }
-// const navLink = document.querySelectorAll(".nav-link");
-
-// function linkAct() {
-//   navLink.forEach((n) => n.classList.remove("active"));
-//   this.classList.add("active");
+// navbar active
+// var currentLocation = window.location.href;
+// if (currentLocation.includes("collection")) {
+//   $(".navbar-nav li:nth-child(1) a").addClass("active");
+// } else if (currentLocation.includes("about-us")) {
+//   $(".navbar-nav li:nth-child(2) a").addClass("active");
+// } else if (currentLocation.includes("press")) {
+//   $(".navbar-nav li:nth-child(3) a").addClass("active");
+// } else if (currentLocation.includes("contact")) {
+//   $(".navbar-nav li:nth-child(4) a").addClass("active");
+// } else {
+//   $(".navbar-nav li:nth-child(4) a").addClass("active");
 // }
-
-// navLink.forEach((n) => n.addEventListener("click", linkAct));
+function highlightCurrent() {
+  const curPage = document.URL;
+  const links = document.getElementsByClassName("nav-link");
+  for (let link of links) {
+    if (link.href == curPage) {
+      link.classList.add("current");
+    }
+  }
+}
+document.onreadystatechange = () => {
+  if (document.readyState === "complete") {
+    highlightCurrent();
+  }
+};
