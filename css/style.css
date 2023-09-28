@@ -249,7 +249,7 @@ button:is(:focus, :active) {
 }
 
 .hero-section {
-    background-image: url(../img/hero-image.png);
+    /* background-image: url(../img/hero-image.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -257,7 +257,10 @@ button:is(:focus, :active) {
     position: relative;
 }
 
-.hero-section .hero-title {
+.main-head{
+    position: relative;
+}
+.main-head .hero-title {
     width: 90%;
     position: absolute;
     bottom: 50%;
@@ -265,7 +268,7 @@ button:is(:focus, :active) {
     transform: translate(50%, 50%);
 }
 
-.hero-section h1 {
+.main-head h1 {
     width: 100%;
     text-align: center;
     color: #FFF;
@@ -534,8 +537,12 @@ button:is(:focus, :active) {
 
 
 .about-bg {
-    background-image: url(../img/about/about-banner.jpg);
-    min-height: calc(100vh - 130px);
+    background-image: url(../img/about/about-banner.png);
+    /* min-height: calc(100vh - 130px);
+    background-repeat: no-repeat;
+    height: 725px;
+    background-size: cover;
+    background-position: center center; */
 }
 
 .bg3 {
@@ -686,11 +693,13 @@ button:is(:focus, :active) {
     border: 0;
     width: 48px;
     height: 48px;
+    display: none;
 }
 
 .product-img .slick-arrows .slick-arrow img {
     filter: invert(1);
-    padding: 10px
+    padding: 10px;
+    display: none;
 }
 
 .product-img .slick-arrows .slick-arrow.prev-arrow {

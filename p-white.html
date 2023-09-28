@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="css/responsive.css?v=1.2">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="./collection.html">Collection</a></li>
-                            <li class="breadcrumb-item"><a href="./rug.html">Artwall</a></li>
+                            <li class="breadcrumb-item"><a href="./artwall.html">Artwall</a></li>
                             <li class="breadcrumb-item active" aria-current="page">P-White</li>
                         </ol>
                     </nav>
@@ -34,29 +36,19 @@
             </div>
             <div class="row row-gap-4">
                 <div class="col-lg-6">
-                    <div class="product-img position-relative">
-                        <img src="./img/p-white/p-white-big.png" alt="" class="img-fluid" />
-                        <div class="slick-arrows">
-                            <button class="prev-arrow">
-                                <img src="img/slick-arrow.png" alt="Left Arrow" />
-                            </button>
-                            <button class="next-arrow">
-                                <img src="img/slick-arrow.png" alt="Right Arrow" />
-                            </button>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div data-hash="slide1" class="swiper-slide"><img src="./img/p-white/p-white-big.png" alt=""></div>
+                          <div data-hash="slide1" class="swiper-slide"><img src="./img/p-white/p-white-sm1.png" alt=""></div>
+                          <div data-hash="slide1" class="swiper-slide"><img src="./img/p-white/p-white-sm2.png" alt=""></div>
+                          
+                          
+                         
                         </div>
-                    </div>
-                    <div class="thumbnail-img">
-                        <a role="button" class="active">
-                            <img src="./img/p-white/p-white-big.png" alt="" class="img-fluid" />
-                        </a>
-                        <a role="button">
-                            <img src="./img/p-white/p-white-sm1.png" alt="" class="img-fluid" />
-                        </a>
-                        <a role="button">
-                            <img src="./img/p-white/p-white-sm2.png" alt="" class="img-fluid" />
-                        </a>
-                       
-                    </div>
+                        <div class="swiper-button-next"><img src="img/slick-arrow.png" alt="Left Arrow" /></div>
+                        <div class="swiper-button-prev"> <img src="img/slick-arrow.png" alt="right Arrow" /></div>
+                      </div>
+                    
                 </div>
                 <div class="col-lg-6 ps-lg-5 prod-desc">
                     <div class="mb-lg-5 mb-3">
@@ -84,8 +76,6 @@
             </div>
         </div>
     </section>
-
-
     <section>
         <div class="container">
             <div class="row">
@@ -95,22 +85,20 @@
             </div>
             <div class="row row-gap-4 justify-content-center">
                 <div class="col-lg-4 col-6">
-                    <img src="img/insta-1.jpg" alt="" class="img-fluid w-100" />
+                   <a href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D"> <img src="img/insta-1.jpg" alt="" class="img-fluid w-100" /></a>
                 </div>
                 <div class="col-lg-4 col-6">
-                    <img src="img/insta-2.jpg" alt="" class="img-fluid w-100" />
+                   <a href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D"> <img src="img/insta-2.jpg" alt="" class="img-fluid w-100" /></a>
                 </div>
                 <div class="col-lg-4 col-6">
-                    <img src="img/insta-3.jpg" alt="" class="img-fluid w-100" />
+                <a href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D">    <img src="img/insta-3.jpg" alt="" class="img-fluid w-100" /></a>
                 </div>
                 <div class="col-12 text-center">
-                     <a href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D" class="btn btn-outline-secondary">See more on Instagram</a>
+                    <a href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D" class="btn btn-outline-secondary">See more on Instagram</a>
                 </div>
             </div>
         </div>
     </section>
-
-
     <section class="contact-sec font-opt">
         <div class="container">
             <div class="row">
@@ -168,23 +156,27 @@
     <script src="js/aos.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/youtube-popup.js"></script>
     <script src="js/app.js"></script>
-    <script>
-        let prodImg = document.querySelector('.product-img img')
-        const thumbImg = document.querySelectorAll(".thumbnail-img a img");
-        thumbImg.forEach((e) => {
-            $(e).click(() => {
-                prodImg.srcset = e.src;
-            });
-        });
-        $('.thumbnail-img a').click(function () {
-            $('.thumbnail-img a').removeClass('active');
-            $(this).addClass('active')
-        })
-    </script>
+   
 </body>
-
+<script>var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    hashNavigation: {
+      watchState: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  </script>
 </html>
