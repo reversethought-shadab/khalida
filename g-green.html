@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header id="header"></header>
+    <my-header></my-header>
 
     <section class="font-opt collection-section">
         <div class="container">
@@ -36,14 +36,31 @@
             </div>
             <div class="row row-gap-4">
                 <div class="col-lg-6">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                          <div data-hash="slide1" class="swiper-slide"><img src="./img/g-green/g-green-big.png" alt=""></div>
-                         
+                    <div class="product-img position-relative">
+                        <img src="./img/g-green/g-green-big.png" alt="" class="img-fluid">
+                        <div class="slick-arrows">
+                            <button class="prev-arrow slick-arrow slick-hidden" aria-disabled="true" tabindex="-1">
+                                <img src="img/slick-arrow.png" alt="Left Arrow">
+                            </button>
+                            <button class="next-arrow slick-arrow slick-hidden" aria-disabled="true" tabindex="-1">
+                                <img src="img/slick-arrow.png" alt="Right Arrow">
+                            </button>
                         </div>
-                        <div class="swiper-button-next"><img src="img/slick-arrow.png" alt="Left Arrow" /></div>
-                        <div class="swiper-button-prev"> <img src="img/slick-arrow.png" alt="right Arrow" /></div>
-                      </div>
+                    </div>
+                    <div class="thumbnail-img slick-initialized slick-slider">
+                        <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 477px; transform: translate3d(0px, 0px, 0px);"><a role="button" class="active slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 159px;" tabindex="0">
+                            <img src="./img/g-green/g-green-big.png" alt="" class="img-fluid">
+                        </a>
+                        <a role="button" class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 159px;" tabindex="0">
+                            <img src="./img/g-green/g-green-small.png" alt="" class="img-fluid">
+                        </a>
+                        <!-- <a role="button" class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 159px;" tabindex="0">
+                            <img src="./img/product/product1.jpg" alt="" class="img-fluid">
+                        </a> -->
+                    </div></div>
+                        
+                        
+                    </div>
                 </div>
                 <div class="col-lg-6 ps-lg-5 prod-desc">
                     <div class="mb-lg-5 mb-3">
@@ -65,8 +82,16 @@
                     </div>
                     <div class="">
                         <h3>Product Information :</h3>
-                        <p class="mb-4">A wool wall art piece with a textured structure in green and cream colors combines natural serenity and timeless elegance. The green and cream hues harmonize beautifully, creating a sense of balance and tranquility in your decor. The textured structure adds depth and visual interest, making it a captivating addition to any room.
-                            A modern Moroccan wool wall art, elegantly framed, combines contemporary design with traditional craftsmanship. It features abstract geometric patterns and vibrant colors, creating a captivating visual impact. This artwork adds sophistication and cultural richness to modern interiors.</p>
+                        <p class="mb-4">A wool wall art piece featuring a textured structure in a deep kaki color offers
+                            a unique blend of earthy elegance. The
+                            rich kaki hue infuses warmth and natural charm into your décor, while the textured structure
+                            adds depth and dimension,
+                            creating an intriguing focal point for your space.
+                            A modern Moroccan wool wall art, elegantly framed, combines contemporary design with
+                            traditional craftsmanship. It
+                            features abstract geometric patterns and vibrant colors, creating a captivating visual
+                            impact. This artwork adds
+                            sophistication and cultural richness to modern interiors.</p>
                     </div>
                 </div>
             </div>
@@ -149,7 +174,7 @@
         </div>
     </section>
 
-    <footer id="footer"></footer>
+   <my-footer></my-footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/aos.js"></script>
@@ -163,19 +188,17 @@
     <script src="js/app.js"></script>
    
 </body>
-<script>var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    hashNavigation: {
-      watchState: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  </script>
+<script>
+    let prodImg = document.querySelector('.product-img img')
+    const thumbImg = document.querySelectorAll(".thumbnail-img a img");
+    thumbImg.forEach((e) => {
+        $(e).click(() => {
+            prodImg.srcset = e.src;
+        });
+    });
+    $('.thumbnail-img a').click(function () {
+        $('.thumbnail-img a').removeClass('active');
+        $(this).addClass('active')
+    })
+</script>
 </html>

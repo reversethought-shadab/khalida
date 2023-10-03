@@ -211,3 +211,27 @@
     }
 
 }
+@media (max-width: 450px) {
+    .main-head h1 {
+        font-size: 37px;
+        line-height: 40px;
+    }
+    .about-title, .collection-text p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .btn {
+        padding: 6px 11px;
+    }
+    .about-head {
+        right: 22vw;
+    }
+    .brand-logos{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .brand-logos img{
+        width: 120px;
+    }
+}

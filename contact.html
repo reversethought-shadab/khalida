@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <header id="header"></header>
+    <my-header></my-header>
 
     <section class="contact-form">
         <div class="container">
@@ -59,52 +59,47 @@
     </section>
 
 
-    <section class="contact-sec font-opt">
+    <section class="contact-sec border-0 font-opt">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="text-center mb-md-4 wow fadeInUp">Contact</h2>
-                </div>
-            </div>
-            <div class="d-line wow fadeInDownBig" data-wow-delay="800ms"></div>
-            <div class="row align-items-center pt-lg-5 mob-line">
+            <div class="row row-gap-4 reverse pt-lg-5 mob-line">
                 <div class="col-md-6">
-                    <div class="contact-wrapper first">
-                        <h3 class="wow fadeInLeft" data-wow-delay="100ms">Khalida Toukkani<br />Founder and Creative
-                            Director</h3>
-                        <div class="d-flex flex-wrap gap-5 wow fadeInLeft" data-wow-delay="300ms">
-                            <p>E-mail<br />
+                    <div class="contact-wrapper first wow fadeInLeft" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInLeft;">
+                        <h3>Khalida Toukkani<br>Founder and Creative Director</h3>
+                        <div class="d-flex flex-wrap gap-3">
+                            <p>E-mail<br>
                                 <a href="mailto:info@my-moroccan-rug.com">info@my-moroccan-rug.com</a>
                             </p>
-                            <p class="ms-lg-5">Phone<br />
+                            <p class="ms-lg-5">Phone<br>
                                 <a href="tel:+41767799600">+41 76 779 96 00</a>
                             </p>
                         </div>
                     </div>
-                    <div class="contact-wrapper">
-                        <h3 class="wow fadeInLeft" data-wow-delay="100ms">Khadija Keddou<br />Marketing Director</h3>
-                        <div class="d-flex flex-wrap gap-5 wow fadeInLeft" data-wow-delay="300ms">
-                            <p>E-mail<br />
+                    <div class="contact-wrapper wow fadeInLeft" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">
+                        <h3>Khadija Keddou<br>Marketing Director</h3>
+                        <div class="d-flex flex-wrap gap-3">
+                            <p>E-mail<br>
                                 <a href="mailto:keddou@my-moroccan-rug.com">keddou@my-moroccan-rug.com</a>
                             </p>
-                            <p class="ms-lg-5">Phone<br />
+                            <p class="ms-lg-5">Phone<br>
                                 <a href="tel:+33758083860">+33 7 58 08 38 60</a>
                             </p>
                         </div>
                     </div>
+                    <div class="row text-center text-md-start wow fadeInLeft" data-wow-delay="600ms" style="visibility: visible; animation-delay: 600ms; animation-name: fadeInLeft;">
+                        <div class="contact-wrapper col-md-6">
+                            <h3>Showroom</h3>
+                            <p>Hinterbergstrasse 32 6330,<br>
+                                Steinhausen Zoug, Switzerland</p>
+                        </div>
+                        <div class="contact-wrapper col-md-6">
+                            <h3>Open</h3>
+                            <p>Monday - Friday : 9AM - 5PM<br>
+                                Rest of time on appointment</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <div class="get-in-touch-wrapper first">
-                        <h2 class="wow fadeInRight" data-wow-delay="100ms">Get in touch</h2>
-                        <a href="contact.html" class="btn btn-outline-secondary wow fadeInRight" data-wow-delay="300ms">Send us an
-                            email</a>
-                    </div>
-                    <div class="get-in-touch-wrapper">
-                        <h2 class="wow fadeInRight" data-wow-delay="600ms">Showroom</h2>
-                        <p class="mb-0 wow fadeInRight" data-wow-delay="900ms">Hinterbergstrasse 32 6330, <span
-                                class="d-md-block">Steinhausen Zoug,
-                                Switzerland</span></p>
-                    </div>
+                <div class="col-md-6 text-center wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                    <img src="./img/contact/map.jpg" alt="Map" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -135,7 +130,7 @@
     </section>
 
 
-    <footer id="footer"></footer>
+   <my-footer></my-footer>
 
     <script src="js/jquery.min.js"></script>
     
