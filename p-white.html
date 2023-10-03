@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <my-header></my-header>
+    <my-header id="header"></my-header>
 
     <section class="font-opt collection-section">
         <div class="container">
@@ -193,5 +193,16 @@
       prevEl: ".swiper-button-prev",
     },
   });
+  </script>
+  <script>
+    $(document).ready(function () {
+  $("#open-nav").click(function () {
+    $("#mob-nav").addClass("open");
+  });
+
+  $(".btn-close").click(function () {
+    $("#mob-nav").removeClass("open");
+  });
+});
   </script>
 </html>

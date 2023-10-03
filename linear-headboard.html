@@ -198,4 +198,15 @@
         $(this).addClass('active')
     })
 </script>
+<script>
+    $(document).ready(function () {
+  $("#open-nav").click(function () {
+    $("#mob-nav").addClass("open");
+  });
+
+  $(".btn-close").click(function () {
+    $("#mob-nav").removeClass("open");
+  });
+});
+  </script>
 </html>

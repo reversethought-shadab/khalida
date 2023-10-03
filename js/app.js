@@ -21,7 +21,7 @@ class MyHeader extends HTMLElement {
               <div class="offcanvas-body align-items-center">
                   <ul class="navbar-nav ">
                       <li class="nav-item ">
-                          <a class="nav-link active" href="./collection.html">Collections</a>
+                          <a class="nav-link" href="./collection.html">Collections</a>
                       </li>
                       
                       <li class="nav-item">
@@ -72,14 +72,7 @@ class MyHeader extends HTMLElement {
           </div>
       </div>
   </nav>
-  <script>
-      document.getElementById('open-nav').onclick = () => {
-          document.getElementById('mob-nav').classList.add('open')
-      }
-      document.querySelector('.btn-close').onclick = () => {
-          document.getElementById('mob-nav').classList.remove('open')
-      }
-  </script>
+  
         `;
   }
 }
@@ -90,7 +83,7 @@ customElements.define("my-header", MyHeader);
 class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section>
+      <section class="my-footer">
       <div class="container">
           <div class="row row-gap-4">
               <div class="col-lg-2 col-6">
@@ -364,18 +357,33 @@ function sendMail() {
   });
 }
 // navbar active
-var currentLocation = window.location.href;
-if (currentLocation.includes("collection")) {
-  $(".navbar-nav li:nth-child(1) a").addClass("active");
-} else if (currentLocation.includes("about-us")) {
-  $(".navbar-nav li:nth-child(2) a").addClass("active");
-} else if (currentLocation.includes("press")) {
-  $(".navbar-nav li:nth-child(3) a").addClass("active");
-} else if (currentLocation.includes("contact")) {
-  $(".navbar-nav li:nth-child(4) a").addClass("active");
-} else {
-  $(".navbar-nav li:nth-child(4) a").addClass("active");
-}
+// var currentPath = window.location.pathname;
+
+// if (currentPath.includes("collection")) {
+//   $(".navbar-nav li:nth-child(1) a").addClass("active");
+// } else if (currentPath.includes("about-us")) {
+//   $(".navbar-nav li:nth-child(2) a").addClass("active");
+// } else if (currentPath.includes("press")) {
+//   $(".navbar-nav li:nth-child(3) a").addClass("active");
+// } else if (currentPath.includes("contact")) {
+//   $(".navbar-nav li:nth-child(4) a").addClass("active");
+// } else {
+//   // Default case when none of the conditions match
+//   $(".navbar-nav li:nth-child(4) a").addClass("active");
+// }
+// $(document).ready(function () {
+//   var currentPath = window.location.pathname;
+//   var menuLinks = $("#mob-nav .navbar-nav a"); // Select the menu links in the mobile navigation
+
+//   menuLinks.each(function (index, element) {
+//     var href = $(element).attr("href");
+
+//     if (currentPath.includes(href)) {
+//       $(element).addClass("active");
+//     }
+//   });
+// });
+
 // function highlightCurrent() {
 //   const curPage = document.URL;
 //   const links = document.getElementsByClassName("nav-link");
@@ -390,3 +398,18 @@ if (currentLocation.includes("collection")) {
 //     highlightCurrent();
 //   }
 // };
+$(document).ready(function () {
+  var currentPath = window.location.pathname;
+
+  // Select all navigation links with class "nav-link"
+  var menuLinks = $(".navbar-nav a.nav-link");
+
+  menuLinks.each(function (index, element) {
+    var linkPath = new URL($(element).attr("href"), window.location.origin)
+      .pathname;
+
+    if (currentPath === linkPath) {
+      $(element).addClass("active");
+    }
+  });
+});

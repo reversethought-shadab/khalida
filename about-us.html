@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <my-header></my-header>
+    <my-header id="header"></my-header>
 
     <section class="about-bg hero-section py-0"></section>
 
@@ -1534,4 +1534,32 @@ Equipe formidable, très réactive et flexible. Je recommande.
     <script src="js/youtube-popup.js"></script>
     <script src="js/app.js"></script>
   </body>
+  <script>
+    $(document).ready(function () {
+  $("#open-nav").click(function () {
+    $("#mob-nav").addClass("open");
+  });
+
+  $(".btn-close").click(function () {
+    $("#mob-nav").removeClass("open");
+  });
+});
+  </script>
+  <script>
+    $(document).ready(function() {
+  var currentPath = window.location.pathname;
+
+  // Select all navigation links with class "nav-link"
+  var menuLinks = $(".navbar-nav a.nav-link");
+
+  menuLinks.each(function(index, element) {
+    var linkPath = new URL($(element).attr("href"), window.location.origin).pathname;
+
+    if (currentPath === linkPath) {
+      $(element).addClass("active");
+    }
+  });
+});
+
+  </script>
 </html>

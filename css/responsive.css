@@ -4,7 +4,9 @@
         visibility: visible;
         width: 320px;
     }
-
+    #header {
+        padding-bottom: 0;
+    }
     #header.fix .nav-link {
         color: #fff;
     }
@@ -61,7 +63,9 @@
     .reverse {
         flex-direction: column-reverse;
     }
-
+    #header .nav-link:is(.active, :hover) {
+        color: #FFF;
+    }
     .collection-sec,
     section {
         padding: 40px 0;
@@ -150,8 +154,11 @@
 
     .contact-wrapper p {
         width: 100%;
+        margin-top: 15px;
     }
-
+    .gap-5{
+        gap: 1rem !important;
+    }
     .get-in-touch-wrapper p {
         font-size: 18px;
         line-height: 20px;
@@ -211,6 +218,16 @@
     }
 
 }
+@media (min-width: 451px) and (max-width:766px) {
+    .thumbnail-img img {
+        width: 89%;
+        gap: 1px;
+        display: block;
+        margin: 6px 36px;
+        /* margin-left: 60px; */
+        height: 130px;
+    }
+}
 @media (max-width: 450px) {
     .main-head h1 {
         font-size: 37px;
@@ -221,10 +238,22 @@
         line-height: 25px;
     }
     .btn {
-        padding: 6px 11px;
+        padding: 12px 14px;
+        margin: auto;
     }
     .about-head {
         right: 22vw;
+    }
+    .slick-slide img:last-child {
+        margin-top: 10px !important;
+    }
+    .thumbnail-img img {
+        width: 89%;
+        gap: 1px;
+        display: block;
+        margin: 6px 36px;
+        /* margin-left: 60px; */
+        height: 130px;
     }
     .brand-logos{
         flex-direction: column;
@@ -233,5 +262,15 @@
     }
     .brand-logos img{
         width: 120px;
+    }
+}
+@media (min-width: 300px) and (max-width:380px) {
+    .thumbnail-img img {
+        width: 100%;
+        gap: 1px;
+        display: block;
+        margin: 6px 81px;
+        /* margin-left: 60px; */
+        height: 113px;
     }
 }
