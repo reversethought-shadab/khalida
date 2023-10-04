@@ -78,9 +78,16 @@
 
     h2 {
         font-size: 32px;
-        line-height: 25px;
+        line-height: 35px;
     }
-
+    .new h2 {
+        color: #080404;
+        font-family: OPTIBakerDanmarkOne;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px;}
+    
     .btn {
         padding: 11px 36px;
     }
@@ -241,18 +248,34 @@
     .custom-margin{
             margin-top: 7vw;
     }
+    .about-title, .collection-text p {
+        font-size: 31px;
+        line-height: 35px;
+    }
+    .product-slider img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 @media (max-width: 450px) {
     .main-head h1 {
         font-size: 37px;
         line-height: 40px;
     }
-    .about-title, .collection-text p {
-        font-size: 18px;
-        line-height: 25px;
+    .collection-text p {
+        font-size: 20px;
+        line-height: 26px;
     }
     .custom-margin{
         margin-top: 7vw;
+}
+.product-slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
 }
     .btn {
         padding: 12px 14px;
@@ -272,11 +295,7 @@
         /* margin-left: 60px; */
         height: 130px;
     }
-    .brand-logos{
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
+   
     .brand-logos img{
         width: 120px;
     }
@@ -289,5 +308,10 @@
         margin: 6px 81px;
         /* margin-left: 60px; */
         height: 113px;
+    }
+    .brand-logos{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
     }
 }
