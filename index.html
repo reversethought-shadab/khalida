@@ -196,10 +196,10 @@
             <div class="col-lg-5">
 <h2>It all began with a love for rugs.</h2>
 <p class="new-para mt-lg-3  wow fadeInLeft" data-wow-delay="800ms" style="visibility: visible; animation-delay: 800ms; animation-name: fadeInLeft;">“My Moroccan Rug” project is a creative fusion between the timeless authenticity of Berber craftsmanship and a contemporary design vision.</p>
-<a href="about-us.html" class="btn btn-outline-secondary wow mt-lg-4 fadeInLeft" data-wow-delay="800ms" style="visibility: visible; animation-delay: 800ms; animation-name: fadeInLeft;">Know More</a>
+<a href="https://www.my-moroccan-rug.com/" class="btn btn-outline-secondary wow mt-lg-4 fadeInLeft" data-wow-delay="800ms" style="visibility: visible; animation-delay: 800ms; animation-name: fadeInLeft;">Know More</a>
             </div>
             <div class="col-lg-7 text-center">
-                <img src="./img/new.png" class="img-fluid" alt="rugs">
+                <img src="./img/new.png" class="img-fluid  wow fadeInRight" data-wow-delay="800ms" style="visibility: visible; animation-delay: 800ms; animation-name: fadeInRight;" alt="rugs">
             </div>
         </div>
     </div>
@@ -255,7 +255,7 @@
                         <div class="position-absolute product-title ">
                             <h2>California Rug</h2>
                             <p>Inspired by sunny days and Californian landscapes</p>
-                            <a href="#" class="btn rounded-5 btn-outline-primary">Know More</a>
+                            <a href="https://www.my-moroccan-rug.com/" class="btn  btn-outline-primary">Know More</a>
                         </div>
                     </div>
                     <div class="position-relative">
@@ -263,7 +263,7 @@
                         <div class="position-absolute product-title ">
                             <h2>Head board</h2>
                             <p>Wooden structure and Sponge</p>
-                            <a href="organic-headboard.html" class="btn rounded-5 btn-outline-primary">Know More</a>
+                            <a href="organic-headboard.html" class="btn  btn-outline-primary">Know More</a>
                         </div>
                     </div>
                     <div class="position-relative">
@@ -272,7 +272,7 @@
                             <h2>P-RED</h2>
                             <p>A palm tree between the desert 
                                 and the sea.</p>
-                                <a href="p-red.html" class="btn rounded-5 btn-outline-primary">Know More</a>
+                                <a href="artwall.html" class="btn  btn-outline-primary">Know More</a>
                         </div>
                     </div>
                     <div class="position-relative">
@@ -280,7 +280,7 @@
                         <div class="position-absolute product-title ">
                             <h2>Ottoman</h2>
                             <p>A touch of handcrafted luxury</p>
-                            <a href="ottoman.html" class="btn rounded-5 btn-outline-primary">Know More</a>
+                            <a href="ottoman-inner.html" class="btn  btn-outline-primary">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -432,7 +432,10 @@
 <script>
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
-      effect: "fade",
+      effect: "fade", // Use the "fade" effect for smooth transitions
+      fadeEffect: {
+        crossFade: true
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -445,12 +448,14 @@
         el: ".swiper-pagination",
         clickable: true,
       },
+      speed: 1000, // Adjust the speed as needed (in milliseconds)
       getTransitionSpeed() {
-    const transitionSpeed = this.currentTransitionSpeed;
-    // don't forget to reset the variable for future calls
-    this.currentTransitionSpeed = 0;
-    return transitionSpeed;
-  }
+        const transitionSpeed = this.currentTransitionSpeed;
+        // don't forget to reset the variable for future calls
+        this.currentTransitionSpeed = 0;
+        return transitionSpeed;
+      }
     });
   </script>
+  
 </html>

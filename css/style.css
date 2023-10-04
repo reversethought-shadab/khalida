@@ -99,7 +99,9 @@ a{
 section {
     padding: 70px 0;
 }
-
+.new {
+    padding: 70px 0 0px 0;
+}
 .btn {
     padding: 15px 45px;
     font-size: 16px;
@@ -246,7 +248,7 @@ button:is(:focus, :active) {
 
 .navbar-expand-lg .navbar-nav {
     
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 .navbar-toggler>span {
     display: inline-block;

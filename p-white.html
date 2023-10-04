@@ -179,21 +179,19 @@
     <script src="js/app.js"></script>
    
 </body>
-<script>var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    hashNavigation: {
-      watchState: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  </script>
+<script>
+    let prodImg = document.querySelector('.product-img img')
+    const thumbImg = document.querySelectorAll(".thumbnail-img a img");
+    thumbImg.forEach((e) => {
+        $(e).click(() => {
+            prodImg.srcset = e.src;
+        });
+    });
+    $('.thumbnail-img a').click(function () {
+        $('.thumbnail-img a').removeClass('active');
+        $(this).addClass('active')
+    })
+</script>
   <script>
     $(document).ready(function () {
   $("#open-nav").click(function () {
