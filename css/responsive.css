@@ -22,7 +22,9 @@
     .navbar-brand {
         margin: auto;
     }
-
+    .navbar-nav {
+        align-items: flex-start;
+    }
     .navbar-toggler {
         position: absolute;
         right: 10px;
@@ -53,7 +55,10 @@
         line-height: 50px;
         margin: 0;
     }
-
+    .custom-row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .d-lg-none.bottom-0.mb-3.position-absolute.text-center {
         width: 90%;
     }
@@ -118,7 +123,7 @@
         font-size: 24px;
         line-height: 30px;
         padding: 6px 13px;
-        right: 10px;
+        right: 35vw;
     }
 
     .product-slider {
@@ -140,7 +145,10 @@
     .contact-sec {
         padding-bottom: 0;
     }
-
+.custom-row{
+    display: flex;
+    flex-direction: column-reverse;
+}
     .contact-sec .d-line {
         display: none;
     }
@@ -216,6 +224,9 @@
     .footer-copyright {
         order: 2;
     }
+    .custom-margin{
+        margin-top: 7vw;
+}
 
 }
 @media (min-width: 451px) and (max-width:766px) {
@@ -227,6 +238,9 @@
         /* margin-left: 60px; */
         height: 130px;
     }
+    .custom-margin{
+            margin-top: 7vw;
+    }
 }
 @media (max-width: 450px) {
     .main-head h1 {
@@ -237,6 +251,9 @@
         font-size: 18px;
         line-height: 25px;
     }
+    .custom-margin{
+        margin-top: 7vw;
+}
     .btn {
         padding: 12px 14px;
         margin: auto;

@@ -42,6 +42,7 @@ class MyHeader extends HTMLElement {
                       </a>
                      
                   </ul>
+                  
   
                   <div class="d-lg-none bottom-0 mb-3 position-absolute text-center social-iconss">
                       <div class="d-flex flex-column">

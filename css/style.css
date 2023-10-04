@@ -189,7 +189,6 @@ button:is(:focus, :active) {
 #header .fix .nav-link {
     color: #08040480;
 }
-
 .navbar-brand {
     margin: 0 30px;
 }
@@ -224,7 +223,7 @@ button:is(:focus, :active) {
     font-weight: 500;
     line-height: 20px;
     padding-bottom: 0;
-    margin: 0 19px;
+    margin: 0px 19px;
     white-space: nowrap;
 }
 #header .nav-link:is(.active, :hover) {
@@ -234,7 +233,7 @@ button:is(:focus, :active) {
     color: #080404;
 }
 .navbar-nav{
-    align-items: start;
+    align-items: center;
 }
 .navbar-toggler {
     border-radius: 50%;
@@ -246,10 +245,7 @@ button:is(:focus, :active) {
     justify-content: center;
 }
 
-.navbar-expand-lg .navbar-nav {
-    
-    margin-top: 1vw;
-}
+
 .navbar-toggler>span {
     display: inline-block;
     width: 20px;
