@@ -89,10 +89,10 @@ class MyFooter extends HTMLElement {
               <div class="col-lg-2 col-6">
                   <h4>Home</h4>
                   <ul class="list-unstyled mb-0 footer-links">
-                      <li><a href="../collection.html">Collection</a></li>
-                      <li><a href="../about-us.html">About Us</a></li>
-                      <li><a href="../press.html">Press</a></li>
-                      <li><a href="../contact.html">Contact</a></li>
+                      <li><a href="./collection.html">Collection</a></li>
+                      <li><a href="./about-us.html">About Us</a></li>
+                      <li><a href="./press.html">Press</a></li>
+                      <li><a href="./contact.html">Contact</a></li>
                   </ul>
               </div>
               <div class="col-lg-2 col-6">
