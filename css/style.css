@@ -289,7 +289,7 @@ button:is(:focus, :active) {
 .new h2{
     color: #080404;
 font-family: OPTIBakerDanmarkOne;
-font-size: 48px;
+font-size:42px;
 font-style: normal;
 font-weight: 500;
 line-height: 50px; /* 104.167% */
@@ -322,7 +322,7 @@ p.new-para {
 }
 
 .collection-text p {
-    font-size: 48px;
+    font-size:42px;
     font-weight: 500;
     font-family: 'Opti-baker';
     line-height: 50px;
@@ -330,7 +330,7 @@ p.new-para {
 
 .about-head {
     font-family: 'Opti-baker';
-    font-size: 40px;
+   font-size:36px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;
@@ -522,7 +522,7 @@ p.new-para {
 
 .contact-wrapper h3 {
     color: #080404;
-    font-size: 32px;
+   font-size:28px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;
@@ -548,7 +548,7 @@ p.new-para {
 
 .get-in-touch-wrapper p {
     font-family: 'Opti-baker';
-    font-size: 32px;
+   font-size:28px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;
@@ -654,7 +654,7 @@ p.new-para {
 
 
 .collection-section h1 {
-    font-size: 48px;
+    font-size:42px;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: 0em;
@@ -672,7 +672,7 @@ p.new-para {
 }
 
 .collect-tag h4 {
-    font-size: 32px;
+   font-size:28px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;
@@ -755,7 +755,7 @@ p.new-para {
 }
 
 .prod-desc h3 {
-    font-size: 32px;
+   font-size:28px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;
@@ -796,7 +796,7 @@ p.new-para {
 }
 
 #pills-tabContent h4 {
-    font-size: 32px;
+   font-size:28px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;
@@ -824,7 +824,7 @@ p.new-para {
 
   
 .my-footer h4 {
-    font-size: 32px;
+   font-size:28px;
     font-weight: 500;
     line-height: 40px;
     letter-spacing: 0em;

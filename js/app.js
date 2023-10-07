@@ -34,7 +34,7 @@ class MyHeader extends HTMLElement {
                           <a class="nav-link" href="./contact.html">Contact</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D">Instagram</a>
+                          <a class="nav-link" href="https://www.instagram.com/khalida_toukkani/?igshid=NjIwNzIyMDk2Mg%3D%3D" target="_blank">Instagram</a>
                       </li>
                       
                       <a class="navbar-brand d-none d-lg-block" href="./index.html">
@@ -99,9 +99,9 @@ class MyFooter extends HTMLElement {
               <div class="col-lg-2 col-6">
                   <h4>Information</h4>
                   <ul class="list-unstyled mb-0 footer-links">
-                      <li><a href="https://www.my-moroccan-rug.com/policies/privacy-policy">Privacy policy</a></li>
-                      <li><a href="https://www.my-moroccan-rug.com/policies/refund-policy">Refund policy</a></li>
-                      <li><a href="https://www.my-moroccan-rug.com/policies/terms-of-service">Tearms of service</a></li>
+                      <li><a href="https://www.my-moroccan-rug.com/policies/privacy-policy" target="_blank">Privacy policy</a></li>
+                      <li><a href="https://www.my-moroccan-rug.com/policies/refund-policy" target="_blank">Refund policy</a></li>
+                      <li><a href="https://www.my-moroccan-rug.com/policies/terms-of-service" target="_blank">Tearms of service</a></li>
                   </ul>
               </div>
               <div class="col-lg-4 text-center align-self-center footer-logo">
@@ -112,9 +112,9 @@ class MyFooter extends HTMLElement {
               <div class="col-lg-2 col-6">
                   <h4>Explore</h4>
                   <ul class="list-unstyled mb-0 footer-links">
-                      <li><a href="https://www.my-moroccan-rug.com/pages/my-story">Our Story</a></li>
-                      <li><a href="https://www.my-moroccan-rug.com/pages/moroccan-rugs-for-professionals">Wholesale</a></li>
-                      <li><a href="https://www.my-moroccan-rug.com/pages/how-to-clean-a-berber-rug">Care & Maintenance</a></li>
+                      <li><a href="https://www.my-moroccan-rug.com/pages/my-story" target="_blank">Our Story</a></li>
+                      <li><a href="https://www.my-moroccan-rug.com/pages/moroccan-rugs-for-professionals" target="_blank">Wholesale</a></li>
+                      <li><a href="https://www.my-moroccan-rug.com/pages/how-to-clean-a-berber-rug" target="_blank">Care & Maintenance</a></li>
                   </ul>
               </div>
               <div class="col-lg-2 col-6">
